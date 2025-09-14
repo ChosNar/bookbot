@@ -12,3 +12,11 @@ def char_count(txt):
         else:
             count[char] = 1
     return count
+def sort_on(item):
+    return item["num"]
+def sorter(count):
+    lst = []
+    for char, num in count.items():
+        lst.append({"char": char, "num": num})
+    lst.sort(reverse = True, key = sort_on)
+    return lst
